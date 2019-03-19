@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang>
+<html class="theme-next muse use-motion" lang="zh-cn">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="passwd用户列表文件，该文件分为如下几部分">
+<meta name="description" content="本文介绍了经常用到的几个配置文件 /etc/passwd1234567root:x:0:0:root:/root:/usr/bin/zshdaemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologinbin:x:2:2:bin:/bin:/usr/sbin/nologinsys:x:3:3:sys:/dev:/usr/sbin/nologinsync:x:4:655">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux 中的几个重要配置文件">
+<meta property="og:title" content="Linux中的几个重要配置文件">
 <meta property="og:url" content="https://latube.github.io/Blog/2019/03/18/Linux-中的几个重要配置文件/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="passwd用户列表文件，该文件分为如下几部分">
-<meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-18T12:42:31.894Z">
+<meta property="og:description" content="本文介绍了经常用到的几个配置文件 /etc/passwd1234567root:x:0:0:root:/root:/usr/bin/zshdaemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologinbin:x:2:2:bin:/bin:/usr/sbin/nologinsys:x:3:3:sys:/dev:/usr/sbin/nologinsync:x:4:655">
+<meta property="og:locale" content="zh-cn">
+<meta property="og:updated_time" content="2019-03-19T11:45:47.570Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux 中的几个重要配置文件">
-<meta name="twitter:description" content="passwd用户列表文件，该文件分为如下几部分">
+<meta name="twitter:title" content="Linux中的几个重要配置文件">
+<meta name="twitter:description" content="本文介绍了经常用到的几个配置文件 /etc/passwd1234567root:x:0:0:root:/root:/usr/bin/zshdaemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologinbin:x:2:2:bin:/bin:/usr/sbin/nologinsys:x:3:3:sys:/dev:/usr/sbin/nologinsync:x:4:655">
 
 
 
@@ -125,7 +125,7 @@
 
 
 
-  <title>Linux 中的几个重要配置文件 | Hexo</title>
+  <title>Linux中的几个重要配置文件 | Hexo</title>
   
 
 
@@ -137,7 +137,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-cn">
 
   
   
@@ -235,7 +235,7 @@
     <link itemprop="mainEntityOfPage" href="https://latube.github.io/Blog/Blog/2019/03/18/Linux-中的几个重要配置文件/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="smith latube">
       <meta itemprop="description" content>
       <meta itemprop="image" content="/Blog/images/avatar.gif">
     </span>
@@ -249,7 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Linux 中的几个重要配置文件</h1>
+          <h1 class="post-title" itemprop="name headline">Linux中的几个重要配置文件</h1>
         
 
         <div class="post-meta">
@@ -299,7 +299,15 @@
       
 
       
-        <h2 id="passwd"><a href="#passwd" class="headerlink" title="passwd"></a>passwd</h2><p>用户列表文件，该文件分为如下几部分</p>
+        <p>本文介绍了经常用到的几个配置文件</p>
+<h2 id="etc-passwd"><a href="#etc-passwd" class="headerlink" title="/etc/passwd"></a>/etc/passwd</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">root:x:0:0:root:/root:/usr/bin/zsh</span><br><span class="line">daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin</span><br><span class="line">bin:x:2:2:bin:/bin:/usr/sbin/nologin</span><br><span class="line">sys:x:3:3:sys:/dev:/usr/sbin/nologin</span><br><span class="line">sync:x:4:65534:sync:/bin:/bin/sync</span><br><span class="line">ocean:x:1001:1001::/mnt/g/Home/ocean:/usr/bin/fish</span><br><span class="line"><span class="built_in">test</span>:x:1002:1002::/mnt/g/Home/<span class="built_in">test</span>:/bin/sh</span><br></pre></td></tr></table></figure>
+<p>用户名:密码:UID:GID:用户描述信息:家目录:登录所有的shell</p>
+<h2 id="etc-shadow"><a href="#etc-shadow" class="headerlink" title="/etc/shadow"></a>/etc/shadow</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">daemon:*:17255:0:99999:7:::</span><br><span class="line">bin:*:17255:0:99999:7:::</span><br><span class="line">sys:*:17255:0:99999:7:::</span><br><span class="line">sshd:*:17255:0:99999:7:::</span><br><span class="line">pollinate:*:17255:0:99999:7:::</span><br><span class="line">ocean:<span class="variable">$6</span><span class="variable">$w5</span>.DnUlA<span class="variable">$UBDtWcJV3DJJZ9</span>.ceS0DVRboykseo6e4zsCDYxl0pEyel0m4Q2ADrP21ZX6Cy7BqwMxnvKRQv347C7ApA62pk1:17971:0:99999:7:::</span><br><span class="line"><span class="built_in">test</span>:!:17971:0:99999:7:::</span><br></pre></td></tr></table></figure>
+<p>用户名: 加密的密码: 最近更改密码的日期:密码不可被变更的天数:密码需要重新变更的天数:密码过期预警天数:密码过期宽恕时间:失效日期:保留</p>
+<h2 id="etc-fstab"><a href="#etc-fstab" class="headerlink" title="/etc/fstab"></a>/etc/fstab</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">LABEL=cloudimg-rootfs	/	 ext4	defaults	0 0</span><br><span class="line">设备文件名	挂载点	文件系统类型	文件系统参数	能否dump备份	是否检验扇区</span><br></pre></td></tr></table></figure>
+<h2 id="etc-shells"><a href="#etc-shells" class="headerlink" title="/etc/shells"></a>/etc/shells</h2><p>系统包含的shell类型<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/bin/sh</span><br><span class="line">/bin/dash</span><br><span class="line">/bin/bash</span><br><span class="line">/bin/rbash</span><br><span class="line">/usr/bin/tmux</span><br><span class="line">/usr/bin/screen</span><br><span class="line">/bin/zsh</span><br></pre></td></tr></table></figure></p>
+<h2 id="etc-group"><a href="#etc-group" class="headerlink" title="/etc/group"></a>/etc/group</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">root:x:0:</span><br><span class="line">daemon:x:1:</span><br><span class="line">bin:x:2:</span><br><span class="line">sys:x:3:</span><br><span class="line">adm:x:4:syslog</span><br><span class="line">tty:x:5:</span><br><span class="line">disk:x:6:</span><br></pre></td></tr></table></figure>
+<p>组名:组密码:组Id:组中的用户</p>
 
       
     </div>
@@ -398,7 +406,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-author-name" itemprop="name">smith latube</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
@@ -446,7 +454,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#passwd"><span class="nav-number">1.</span> <span class="nav-text">passwd</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#etc-passwd"><span class="nav-number">1.</span> <span class="nav-text">/etc/passwd</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#etc-shadow"><span class="nav-number">2.</span> <span class="nav-text">/etc/shadow</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#etc-fstab"><span class="nav-number">3.</span> <span class="nav-text">/etc/fstab</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#etc-shells"><span class="nav-number">4.</span> <span class="nav-text">/etc/shells</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#etc-group"><span class="nav-number">5.</span> <span class="nav-text">/etc/group</span></a></li></ol></div>
             
 
           </div>
@@ -470,7 +478,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">smith latube</span>
 
   
 </div>
